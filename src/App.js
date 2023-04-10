@@ -39,8 +39,7 @@ function App() {
   }
 
    const signup = (signupjson) => {
-    console.log("call" +JSON.stringify(signupjson));
-    const response = fetch(`http://3.232.225.73/digitalwallet/user/create`,  {
+    const response = fetch(`http://3.232.225.73/digital-wallet/user/create`,  {
       headers:{
           'accept': 'application/json',
           'Access-Control-Allow-Origin': '*'
@@ -58,6 +57,15 @@ function App() {
   }
 
    useEffect(()=>{
+    const responseTest = fetch(`http://3.232.225.73:80/test`,  {
+      headers:{
+          'accept': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+          
+      },
+      method: "Get"
+  })
+  console.log(responseTest)
       },[])
        
    
